@@ -1,0 +1,56 @@
+.progress-steps {
+    $circle-size: 20px;
+    display: flex;
+    justify-content: space-between;    
+    position: relative;
+    .step-circle {
+        height: $circle-size;
+        width: $circle-size;
+        border: 1px solid $lighter;
+        border-radius: $circle-size;
+        background: $primary;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        z-index: 2;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $lighter;
+    }
+    .step-circle.active {
+        border: 1px solid $info;
+        &:after {
+            content: "";
+            height: 14px;
+            width: 14px;
+            border-radius: $circle-size;
+            background: $info;
+            display: block;
+        }
+    }
+    .step-circle.checked {
+        font-size: 16px;
+        color: $primary;
+        background-color: $info;
+    }
+}
+
+.progress-steps-dark {
+    &:after {
+        background-color: $primary;
+    }
+    .step-circle {
+        border-color: $primary;
+    }
+    .step-circle.checked {
+        color: $info;
+        background-color: $primary;
+    }
+}

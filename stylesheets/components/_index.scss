@@ -1,0 +1,108 @@
+.header {
+    position: relative;
+    $main-image-height: 496px;
+    .header__banner {
+        height: $main-image-height;
+    }
+    .header__text {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    $triple__seciton-height: 256px;
+    .triple__section {
+        margin-top: -90px;
+    }
+    .triple__image-wrap {
+        height: $triple__seciton-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        text-decoration: none;
+        color: white;
+        border-right: 1px solid white;
+    .triple__over {
+        position: absolute;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba($primary, .8);
+        transition: background-color .5s;
+    }
+        &:hover, &.active {
+            color: $primary;
+            font-weight: bolder;
+            .triple__image {
+                filter: blur(0);
+            }
+            .triple__over {
+                background-color: rgba($secondary, .6);
+            }
+        }
+    }
+    .triple__text {
+        writing-mode: vertical-lr;
+        font-size: $h4-font-size;
+        letter-spacing: 0.6rem;
+        transition: all .5s;
+    }
+    .triple__image {
+        position: absolute;
+        right: -5px;
+        left: -5px;
+        top: -5px;
+        bottom: -5px;
+        filter: blur(5px);
+        z-index: -2;
+        transition: filter .5s;
+    }
+}
+.p-info {
+    @include media-breakpoint-up(md) {
+        margin-top: -20px;
+        margin-bottom: -20px;
+      }
+    &__image {
+        height: 250px;
+        @include media-breakpoint-up(md){
+            height: 468px;
+        }
+    }
+    &__text {
+        color: #8DA291 !important;
+        @include media-breakpoint-up(md) {
+            writing-mode: vertical-rl;
+            line-height: 2.5;
+        }
+        max-height: 420px;
+        line-height: 2;
+    }
+}
+.card {
+    border: none !important;
+    &_image {
+    height: 315px;
+    background-size: cover;
+    background-position: center center;
+    }
+    &_body {
+        border: 1px solid #EAF0ED;
+    }
+    &_name {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 1.25rem;
+        border-right: 1px solid #EAF0ED;
+    }
+    &_price {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 1.25rem;
+    }
+}

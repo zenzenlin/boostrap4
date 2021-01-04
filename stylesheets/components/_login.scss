@@ -1,0 +1,11 @@
+.material-icons {
+    &_withicon {
+        position: absolute !important;
+        padding-left: 20px;
+    }
+    .material-icons_text {
+        position: absolute !important;
+        top: 20px !important;
+        left: 20px !important;
+    }
+}

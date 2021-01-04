@@ -1,0 +1,17 @@
+.input-height-auto {
+    padding: 20px 5px;
+    height: auto;
+    background: $info;
+}
+.primary-lighter {
+    @include button-variant($info, $info);
+}
+.btn-info-border {
+    @include button-variant($white, $info);
+}
+.btn-white {
+    @include button-variant($white, $info);
+}
+.nav-pills>.nav-link {
+    border: 1px solid $info;
+}
